@@ -1,6 +1,11 @@
 # Clone da Página Inicial do iFood
 
 Este é um projeto que reproduz a página inicial do iFood, criado com React Native e estilizado com NativeWind. O projeto serve como uma prática para o uso de componentes e estilização em React Native, sem funcionalidades ou navegação adicional.
+<p align="center">
+    <img src="src/assets/home_2.jpg" alt="Foto 1 da home" height="460">
+    &nbsp;&nbsp;&nbsp;&nbsp; <!-- Isso adiciona quatro espaços -->
+    <img src="src/assets/home_1.jpg" alt="Foto 2 da home" height="460">
+</p>
 
 ## Funcionalidades
 - Interface da página inicial do iFood.
