@@ -1,50 +1,75 @@
-# Welcome to your Expo app 👋
+# Clone da Página Inicial do iFood
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um projeto que reproduz a página inicial do iFood, criado com React Native e estilizado com NativeWind. O projeto serve como uma prática para o uso de componentes e estilização em React Native, sem funcionalidades ou navegação adicional.
 
-## Get started
+## Funcionalidades
+- Interface da página inicial do iFood.
+- Exibição de imagens e textos.
+- Estilização utilizando NativeWind.
 
-1. Install dependencies
+## Tecnologias Utilizadas
+- **React Native**
+- **NativeWind** para estilização
+- **Expo Go** para emulação
+- **Ionicons** para ícones
+- **JSON Server** para dados simulados (db.json)
 
-   ```bash
-   npm install
-   ```
+## Configuração do Ambiente
 
-2. Start the app
+### Pré-requisitos
 
-   ```bash
+Certifique-se de ter instalado:
+- **Node.js** e **npm**
+- **npx** para execução de comandos
+- **Expo Go** (instalado no dispositivo móvel ou emulador)
+- **JSON Server** para servir os dados
+
+### Passo a Passo para Rodar o Projeto
+
+1. **Clone o repositório**:
+
+    ```bash
+    git clone https://github.com/chicofgdl/chicoFood.git
+    cd ifood-clone
+    ```
+
+2. **Instale as dependências**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Configure o endereço IP**: Em algumas partes do código, é necessário atualizar o endereço `localhost` para o IP da sua máquina:
+    
+    - Em `ifood-clone/src/components/Restaurants/index.tsx`
+    - Em `ifood-clone/src/components/RestaurantsList/index.tsx`
+    - Em `ifood-clone/src/components/Trending/index.tsx`
+    
+    Substitua `localhost` pelo seu endereço IPV4 local. Para encontrar o IP, abra o terminal e digite:
+
+    ```bash
+    ipconfig
+    ```
+    
+    No resultado, localize o campo **Endereço IPv4** e use esse valor no código, por exemplo:
+
+    ```javascript
+    const response = await fetch("http://{SEU_IPV4}:3000/foods");
+    ```
+
+4. **Inicie o servidor JSON**: Abra um terminal na pasta do projeto e inicie o JSON Server com o arquivo `db.json`:
+
+    ```bash
+    npx json-server db.json --port 3000
+    ```
+
+5. **Inicie o Expo**: Em um segundo terminal, execute o Expo para rodar a aplicação no emulador ou dispositivo:
+
+    ```bash
     npx expo start
-   ```
+    ```
 
-In the output, you'll find options to open the app in a
+6. **Abra o aplicativo no dispositivo**:
+    - No navegador que abrirá, escolha a opção de emulação desejada (Android, iOS ou Web).
+    - Se estiver utilizando um dispositivo móvel, escaneie o QR Code com o aplicativo **Expo Go**.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
